@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.1.0
+.VERSION 0.2.0
 
 .GUID 7a2d48ae-d404-4cd1-b526-3a268bf14aca
 
@@ -8,9 +8,9 @@
 
 .COMPANYNAME Mohamed Zaatar
 
-.COPYRIGHT GNU GENERAL PUBLIC LICENSE
+.COPYRIGHT (c) 2017 Mohamed Zaatar. All rights reserved.
 
-.TAGS Azure SQL Db backup
+.TAGS Azure SQL Db backup runbook powershell
 
 .LICENSEURI https://github.com/mzaatar/AzureScripts/blob/AddInitialScript/License.txt
 
@@ -18,13 +18,17 @@
 
 .ICONURI https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
 
-.EXTERNALMODULEDEPENDENCIES 
+.EXTERNALMODULEDEPENDENCIES
 
 .REQUIREDSCRIPTS 
 
 .EXTERNALSCRIPTDEPENDENCIES 
 
+# .REQUIREDMODULES @({ModuleName="Azure", ModuleVersion="1.0.3"},{ModuleName="AzureRM.Profile", ModuleVersion="2.5.0"},{ModuleName="AzureRM.Sql", ModuleVersion="2.5.0"},{ModuleName="AzureRM.Resources", ModuleVersion="3.4.0"} )
+
 .RELEASENOTES
+0.1.0: - Add initial version
+0.2.0: - Update Azure module dependencies
 
 #>
 
@@ -34,14 +38,12 @@
 	This Azure Automation runbook automates the database backup in an Azure. 
 
 .DESCRIPTION
-	The runbook backup your SQL Azure databse into an Azure storage account. 
-	This runbook can be scheduled through Azure to maintain your backup up to date daily/monthly/yearly. 
-	
-	This is a PowerShell powershell runbook script.
+	This is a PowerShell runbook script.
+	This runbook backup your SQL Azure database into an Azure storage account. This runbook can be scheduled through Azure to maintain your backup up to date daily/monthly/yearly. 
 
-	This runbook requires the "Azure" and "AzureRM.Resources" modules which are present by default in Azure Automation accounts.
+	This runbook requires the "Azure", "AzureRM​.Profile", "AzureRM​.Sql" and "AzureRM.Resources" modules which are present by default in Azure Automation accounts.
 	For detailed documentation and instructions, see: 
-	
+
 	https://automys.com/library/asset/scheduled-virtual-machine-shutdown-startup-microsoft-azure
 
 .PARAMETER AutomationConnection
@@ -120,7 +122,7 @@ param(
     [String]$ServerPassword
 )
 
-$VERSION = "0.1.0"
+$VERSION = "0.2.0"
 $currentTime = (Get-Date).ToUniversalTime()
 
 Write-Output "Backup SQL Azure db automation script - version $VERSION"
