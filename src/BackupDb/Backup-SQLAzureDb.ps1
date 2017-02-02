@@ -1,3 +1,33 @@
+
+<#PSScriptInfo
+
+.VERSION 1.0
+
+.GUID fa60848a-c703-4d33-9261-f42ccef837b6
+
+.AUTHOR mzaatar@outlook.com
+
+.COMPANYNAME Mohamed Zaatar
+
+.COPYRIGHT GNU GENERAL PUBLIC LICENSE
+
+.TAGS Azure SQL Db backup
+
+.LICENSEURI https://github.com/mzaatar/AzureScripts/blob/AddInitialScript/License.txt
+
+.PROJECTURI https://github.com/mzaatar/AzureScripts
+
+.ICONURI https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+
+#>
 <#
     .SYNOPSIS
         This Azure Automation runbook automates the database backup in an Azure. 
