@@ -101,7 +101,6 @@ $bacpacFilename = $ServerName + '-' + $DbName + '-' +(Get-Date).ToString("yyyyMM
 $BaseStorageUri = "https://$storageAccount.blob.core.windows.net/$blobContainer/"
 $BacpacUri = $BaseStorageUri + $bacpacFilename
 
-
 # --------------------------- Main script ---------------------------
 Write-Output "Start backing db $DbName to storage account $storageAccount with name $bacpacFilename ..."
 try
