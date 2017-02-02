@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">    
+		<id>MZaatar.AzureScrcipts.Utils.BackupDb</id>
+		<version>0.1.0</version>
+		<authors>Mohamed Zaatar</authors>
+		<owners>Mohamed Zaatar</owners>
+		<summary>An Azure Automation script powershell script to automate Azure SQL db</summary>
+		<licenseUrl>https://github.com/mzaatar/AzureScripts/blob/AddInitialScript/License.txt</licenseUrl>
+		<projectUrl>https://github.com/mzaatar/AzureScripts</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An Azure Automation script powershell script to automate Azure SQL db</description>
+		<copyright>Copyright GitHub 2016</copyright>    
+		<tags>Azure SQL server db backup</tags>
+	</metadata>
+	<files>
+		<file src="Backup-SQLAzureDb.ps1" target="src" />
+	</files>
+</package>

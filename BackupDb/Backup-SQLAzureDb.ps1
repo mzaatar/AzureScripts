@@ -63,7 +63,7 @@
     .OUTPUTS
         Human-readable informational and error messages produced during the job. Not intended to be consumed by another runbook.
 #>
-
+function Backup-SQLAzureDb {
 param(
     [parameter(Mandatory=$true)]
 	[String] $AutomationConnection,
@@ -132,3 +132,5 @@ Write-Output "Export status is:"
 $status
 
 Write-Output "End export"
+}
+export-modulemember -function Backup-SQLAzureDb
